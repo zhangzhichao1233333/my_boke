@@ -1,0 +1,40 @@
+  /*---------- author zane   date 2020/4/15 ----------*/  
+ 文件夹名称                   简介
+ app                     应用城西的业务逻辑代码存放文件夹
+    Console              存放自定义Artisan命令文件
+    Http
+	Controller       存放控制器文件
+        Middlewra        存放【中间件】文件
+    bootstrap            框架启动和自动加载设置相关的文件
+    composer.jsom        应用依赖的扩展报
+    composer.lock        扩展包列表，确保这个应用的副本使用相同版本的扩展包
+    config               应用程序的配置文件
+    database             数据库操作相关文件（数据库迁移和数据库填充）
+    node_modules         存放NPM依赖模块
+    package.json         应用所需的NPM包配置文件
+    public               前端控制器和资源相关文件（图片 JavaScript CSS）
+    readme.md            项目介绍说明文件
+    resources            应用资源
+        js               未编译的JavaScript代码
+        sass             未编译的SASS代码（将会编译为CSS）
+        lang             多语言文件
+        views            试图文件
+   routes 
+        api.php          用于定义API类型的路由
+        channels.php     事件广播注册信息
+        web.php          用于定义Web类型的路由（重点，大部分情况下本书会用到）
+   server.php            使用PHP内置服务器时的URL重写（类似于Apache的‘mod_rewrite’） 
+   storage               编译后的视图，基于会话，文件缓存和其他架构生成的文件
+        app              目录可用于存储应用城西使用的任何文件
+        framework        目录被用于保存框架生成得分文件及缓存
+        log              应用程序的日志文件
+   tests                 应用测试相关文件
+   verdor                Composer依赖模块
+   webpack.mix.js        Laravel的前端工作流配置文件
+   yam.lock              Yam依赖版本锁定文件
+   .gitignore            被Git所忽略的文件
+   .env                  环境变量配置的我呢见
+
+
+
+ 
