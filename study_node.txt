@@ -35,6 +35,21 @@
    .gitignore            被Git所忽略的文件
    .env                  环境变量配置的我呢见
 
+git信息
+    git init             初始化git信息
+    git config --global user.name '随便的名称'
+    git config --global user.email '获取key时候的邮箱'
+    git add -A           添加修改项
+    git commit -m ‘提交备注’
+    git checkout -b  dev 添加新的分支
+    git merge dev         合并dev到master 上 
+
+
+
+/*---------- author zane   date 2020/4/16 ----------*/
+
+
+
 
 
  
