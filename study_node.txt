@@ -46,10 +46,22 @@ git信息
 
 
 
-/*---------- author zane   date 2020/4/16 ----------*/
+/*---------- author zane   date 2020/4/17 ----------*/
+Laravel配置路由 
+  当用户在查看一个网页时一个完成的访问过程如下
+      1.打开浏览器在地址栏中输入URL并访问
+      2.路由将URL请求映射到指定的控制器上
+      3.控制器接受到请求，开始进行处理，如果视图需要动态数据进行渲染，则控制亲会开始冲模型中读取数据
+      4 数据读取完毕之，京数传给视图进行渲染
+      5.视图渲染完毕，在浏览上呈现出完整的页面
+   
+Laravel常用的基本HTTP操作分为GET/POST/PATCH/DELETE
+      GET 常用月页面的读取
+      POST 常用于诗提交
+      PATCH 常用于数据更新
+      DELETE 常用于数删
+
+Laravle 创建控制器
+     php artisan make:controller StaticPageController
 
 
-
-
-
- 
