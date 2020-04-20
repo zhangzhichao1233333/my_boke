@@ -3,6 +3,6 @@
 	<a href="https://learnku.com/laravel/courses" target="_blank">
 		可以俩你想，每日精进</a>
 	<div class="float-right">
-		<a href="/about">关于</a>
+		<a href="{{ route('about') }}">关于</a>
 	</div>
 </footer>
