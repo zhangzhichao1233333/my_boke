@@ -45,7 +45,6 @@ git信息
     git merge dev         合并dev到master 上 
 
 
-
 /*---------- author zane   date 2020/4/17 ----------*/
 Laravel配置路由 
   当用户在查看一个网页时一个完成的访问过程如下
@@ -74,5 +73,9 @@ Laravle 创建控制器
      php artisan tinker                               进入tinker环境
      php artisan route:list                           查看路由列表
        
+composer 问题 
+     composer install --ignore-platform-reqs 版本存在问题需要忽略
+     composer update --ignore-platform-regs 版本存在问题更新版本
+     
 	
 
