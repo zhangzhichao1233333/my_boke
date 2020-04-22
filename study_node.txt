@@ -44,6 +44,10 @@ git信息
     git checkout -b  dev 添加新的分支
     git merge dev         合并dev到master 上 
     git clean -d -fx .    删除所有冲突文件
+    在Git中使用git add命令添加文件进入版本库时，弹出警告：
+    git config --global core.safecrlf true
+
+
 
 /*---------- author zane   date 2020/4/17 ----------*/
 Laravel配置路由 
