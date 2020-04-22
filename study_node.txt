@@ -43,7 +43,7 @@ git信息
     git commit -m ‘提交备注’
     git checkout -b  dev 添加新的分支
     git merge dev         合并dev到master 上 
-
+    git clean -d -fx .    删除所有冲突文件
 
 /*---------- author zane   date 2020/4/17 ----------*/
 Laravel配置路由 
@@ -80,5 +80,9 @@ composer 问题
 npm 信息
      npn run dev将.scss 转为.css 文件
      npm run watch-poll 发上变化后立即执行编译转化      
-	
+     删除npm 重装npm
+	rm -rf node_modules
+	rm package-lock.json yam.lock
+	npm cache clear --force
+	npm install	
 
