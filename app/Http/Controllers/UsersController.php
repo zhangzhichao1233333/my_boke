@@ -21,7 +21,8 @@ class UsersController extends Controller
 	 * @data 2020/4/22
 	 * @param Object $user  
 	 */
-	public function show(User $user){
+	public function show(User $user)
+	{
 		//echo"<pre>";print_r(compact('user'));exit;
 		return view('users.show',compact('user'));		
 	}
