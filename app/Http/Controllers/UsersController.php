@@ -25,7 +25,7 @@ class UsersController extends Controller
 	 */
 	public function show(User $user)
 	{
-		echo"<pre>";print_r(123123);die;
+		echo"<pre>";print_r($user);die;
 		return view('users.show',compact('user'));		
 	}
 }
