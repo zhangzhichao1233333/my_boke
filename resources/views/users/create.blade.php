@@ -11,10 +11,10 @@
 			<from method="POST" action="{{ route('users.store') }}">
 				<div class="form-group">
 					<label for="name">名称：</label>
-					<input type="text" name="name" class="from-control" value="{{ old('name') }}">
+					<input type="text" name="name" class="form-control" value="{{ old('name') }}">
 				</div>
 				<div class="form-group">
-					<label for="email">邮箱：<label>
+					<label for="email">邮箱：</label>
 					<input type="text" name="email" class="form-control" value="{{ old('email') }}">
 				</div>
 				<div class="form-group">
