@@ -80,6 +80,7 @@ Laravle 创建控制器
 composer 问题 
      composer install --ignore-platform-reqs 版本存在问题需要忽略
      composer update --ignore-platform-regs 版本存在问题更新版本
+    composer require "overtrue/laravel-lang:~3.0" --ignore-platform-regs
 
 npm 信息
      npn run dev将.scss 转为.css 文件
