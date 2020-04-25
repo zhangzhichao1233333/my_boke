@@ -3,7 +3,7 @@
 	<head>
 		<title>@yield('title','my boke') - 新博客新精彩</title>
 		<link rel="stylesheet" href="{{mix('css/app.css')}}">
-		<script src="{{ mix('js/app.js') }}">
+		<script src="{{ mix('js/app.js') }}"></script>
 	</head>
 	<body>
 		@include('layouts._header')
