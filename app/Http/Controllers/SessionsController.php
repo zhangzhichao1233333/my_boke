@@ -13,7 +13,7 @@ class SessionsController extends Controller
 	 * */
 	public function create()
 	{
-		return view('sesstions.create');
+		return view('sessions.create');
 	}
 	/* 验证
 	 * @function store
