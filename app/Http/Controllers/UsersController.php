@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Models\User;
 
+use Auth;
+
 class UsersController extends Controller
 {
 	/** 创建
