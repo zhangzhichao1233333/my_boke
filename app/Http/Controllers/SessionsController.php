@@ -41,4 +41,17 @@ class SessionsController extends Controller
 
 		return ;
 	}
+	
+	/* 验证
+         * @function store
+         * @author zane
+         * @data 2020/4/16
+         * */
+	public function destroy()
+	{
+		Auth::logout();
+		session()->flash('success','您已成功退出！');
+		return redirect('login');
+	}
+
 }
