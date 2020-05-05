@@ -10,6 +10,12 @@ use Auth;
 
 class UsersController extends Controller
 {
+	public function __construct()
+	{
+		$this->niddleware('auth',[
+			'except' => ['show','create','store']
+		]);
+	}
 	/** 创建
 	 * @function create 
 	 * @author Zane
