@@ -12,7 +12,7 @@ class UsersController extends Controller
 {
 	public function __construct()
 	{
-		$this->niddleware('auth',[
+		$this->middleware('auth',[
 			'except' => ['show','create','store']
 		]);
 	}
