@@ -131,7 +131,7 @@ class UsersController extends Controller
 		$from   = env('MAIL_FROM_ADDRESS');
 		$name   = env('MAIL_FROM_NAME');
 		$to     = $user->email;
-		$subject = '感谢之策 My_boke应用！请确认您的邮箱。';
+		$subject = '感谢注册 My_boke应用！请确认您的邮箱。';
 		Mail::send($view,$data,function ($message) use ($from,$name,$to,$subject) {
 			$message->from($from,$name)->to($to)->subject($subject);
 		});	
