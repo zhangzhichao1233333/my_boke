@@ -8,7 +8,7 @@ use App\Models\User;
 
 use Auth;
 
-use Mail
+use Mail;
 
 class UsersController extends Controller
 {
