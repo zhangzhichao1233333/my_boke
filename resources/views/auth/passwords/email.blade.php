@@ -17,7 +17,7 @@
 				<div class="form-group{{ $errors->has('email')?'has-error' :'' }}">
 					<label for="email" class="form-control-label">邮箱地址:</label>
 					<input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
-					@if ($error->has('email'))
+					@if ($errors->has('email'))
 					<span class="form-text">
 						<strong>{{ $errors->first('email') }}</strong>
 					</span>
