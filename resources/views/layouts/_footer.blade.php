@@ -5,7 +5,7 @@
 		</p>
 		<p class="float-right">
 			<a href="mailto:name@email.com">练习我们</a></p>
-			<a href="{{ route('about') }}">关于</a>
+			<!--a href="{{ route('about') }}">关于</a-->
 		</p>
 	</div>
 </footer>
