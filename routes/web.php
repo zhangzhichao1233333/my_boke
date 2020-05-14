@@ -15,7 +15,7 @@
     return view('welcome');
 })*/
 
-Routes::get('/','PagesController@root')->name('root');
+Route::get('/','PagesController@root')->name('root');
 #Route::get('/','StaticPagesController@home')->name('home');
 Route::get('/help','StaticPagesController@help')->name('help');
 Route::get('/about','StaticPagesController@about')->name('about');
