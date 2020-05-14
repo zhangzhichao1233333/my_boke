@@ -10912,7 +10912,7 @@ body {
   margin-bottom: 60px;
 }
 
-.foot {
+.footer {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -10921,44 +10921,22 @@ body {
   background-color: #000;
 }
 
-.foot .container {
+.footer .container {
   padding-right: 15px;
   padding-left: 15px;
 }
 
-.foot .container p {
+.footer .container p {
   margin: 19px 0;
   color: #c1c1c1;
 }
 
-.foot .container p a {
+.footer .container p a {
   color: inherit;
 }
 
 nav .navbar .navbar-expand-lg {
   message-bottom: 20px;
-}
-
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: #777;
-  font-size: 13px;
-  font-weight: bold;
-}
-
-footer a {
-  color: #555;
-}
-
-footer a:hover {
-  color: #222;
-}
-
-footer img.brand-icon {
-  width: 17px;
-  height: 17px;
 }
 
 /* User gravatar*/
