@@ -11,7 +11,7 @@
 			</ul>
 
 			<!-- Right side Of Navbar -->
-                	<ul class="navBar-nav navbar-right">
+                	<ul class="navbar-nav navbar-right">
                 	@if (Auth::check())
                         	<li class="nav-item"><a class="nav-link" href="{{ route('users.index') }}">用户列表</a></li>
                         	<li class="nav-item dropdown">
