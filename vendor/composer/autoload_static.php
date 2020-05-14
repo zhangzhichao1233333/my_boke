@@ -25,6 +25,7 @@ class ComposerStaticInit4a28b06ae91dba25db5aee00dc1a89e3
         'b6ec61354e97f32c0ae683041c78392a' => __DIR__ . '/..' . '/scrivo/highlight.php/HighlightUtilities/functions.php',
         'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
         'f960e77410032f236cef8c56617b313e' => __DIR__ . '/..' . '/overtrue/laravel-lang/src/helpers.php',
+        'b4e3f29b106af37a2bb239f73cdf68c7' => __DIR__ . '/../..' . '/app/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -425,6 +426,7 @@ class ComposerStaticInit4a28b06ae91dba25db5aee00dc1a89e3
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\FollowersController' => __DIR__ . '/../..' . '/app/Http/Controllers/FollowersController.php',
         'App\\Http\\Controllers\\SessionsController' => __DIR__ . '/../..' . '/app/Http/Controllers/SessionsController.php',
         'App\\Http\\Controllers\\StaticPagesController' => __DIR__ . '/../..' . '/app/Http/Controllers/StaticPagesController.php',
         'App\\Http\\Controllers\\StatusesController' => __DIR__ . '/../..' . '/app/Http/Controllers/StatusesController.php',
