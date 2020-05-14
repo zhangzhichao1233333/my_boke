@@ -10884,8 +10884,7 @@ a.text-dark:focus {
 
 body {
   font-family: Helvetica, "Microsoft YaHei", Arial, sans-serif;
-  fon-size: 14px;
-  font-weight: normal;
+  font-size: 14px;
 }
 
 /* header */
@@ -10927,7 +10926,7 @@ body {
 }
 
 .footer .container p {
-  margin: 19px 0;
+  padding: 19px 0;
   color: #c1c1c1;
 }
 
