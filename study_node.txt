@@ -77,7 +77,8 @@ Laravle 创建控制器
      php artisan db:seed                              填充数据库
      php artisan db:seed --class=UsersTableSeeder     只填充后面这个表
      php artisan tinker                               进入tinker环境
-     php artisan route:list                           查看路由列表                               
+     php artisan route:list                           查看路由列表         
+     php artisan cache:clear                          清除缓存                 
        
 composer 问题 
      composer install --ignore-platform-reqs 版本存在问题需要忽略
