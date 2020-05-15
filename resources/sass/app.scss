@@ -52,7 +52,7 @@ body {
 		padding-left:15px;
 
 		p {
-		//	padding:19px 0;
+			padding:19px 0;
 			color:#c1c1c1;
 
 			a{
@@ -64,6 +64,16 @@ body {
 
 nav .navbar .navbar-expand-lg {
 	message-bottom:20px;
+}
+
+/* User register page */
+.register-page {
+  img.captcha {
+    cursor: pointer;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 3px;
+  }
 }
 //footer {
 //	margin-top: 45px;
