@@ -37,7 +37,7 @@ class User extends Authenticatable implements MustVerifyEmailContract
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    public function gravatar($size = '100')
+   /* public function gravatar($size = '100')
     {
     	$hash = md5(strtolower(trim($this->attributes['email'])));
 	return "http://www.gravatar.com/avatar/$hash?s=$size";	
@@ -95,5 +95,5 @@ class User extends Authenticatable implements MustVerifyEmailContract
     public function isFollowing($user_id)
     {
         return $this->followings->contains($user_id);
-    }
+    }*/
 }
