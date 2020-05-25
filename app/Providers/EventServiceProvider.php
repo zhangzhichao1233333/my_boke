@@ -20,10 +20,7 @@ class EventServiceProvider extends ServiceProvider
     	],
 	\Illuminate\Auth\Events\Verified::class => [
             \App\Listeners\EmailVerified::class,
-        ],
-	\Illuminate\Auth\Events\ResetsPasswords::class => [
-	    \App\Listeners\EmailVerified::class,
-	]
+        ]
     ];
 
     /**
