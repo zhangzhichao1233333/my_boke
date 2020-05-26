@@ -22,7 +22,7 @@ Route::get('/','PagesController@root')->name('root');
 //Route::get('/about','StaticPagesController@about')->name('about');
 
 //Route::get('/signup','UsersController@create')->name('signup');
-//Route::resource('users','UsersController');
+Route::resource('users','UsersController');
 /**上面创建的这句话相当于
  * te::get('/users','UsersController@index')->name('users.index'); 显示所有用户列表的页面
  * Route::get('/users/create','UsersController@create')->name('users.create'); 显示用户个人信息的页面
