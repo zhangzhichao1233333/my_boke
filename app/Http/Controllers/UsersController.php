@@ -89,8 +89,7 @@ class UsersController extends Controller
 	}
 
 	public function edit(User $user)
-	{
-	echo"<pre>";print_r($user);die;	
+	{	
 //		$this->authorize('update',$user);
 		return view('users.edit',compact('user'));
 	}
@@ -108,7 +107,7 @@ class UsersController extends Controller
 //			$data['password'] = bcrypt($request->password);
 //		}
 //		$user->update($data);
-
+		echo"<pre>";print_r($request);die;
 		$user->update($request->all());
 
 		return redirect()->route('users.show',$user->id)->with('success','个人资料更新成功');
