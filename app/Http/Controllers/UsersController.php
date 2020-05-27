@@ -89,7 +89,8 @@ class UsersController extends Controller
 	}
 
 	public function edit(User $user)
-	{	
+	{
+	echo"<pre>";print_r($user);die;	
 //		$this->authorize('update',$user);
 		return view('users.edit',compact('user'));
 	}
