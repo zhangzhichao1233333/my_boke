@@ -107,9 +107,9 @@ class UsersController extends Controller
 //			$data['password'] = bcrypt($request->password);
 //		}
 //		$user->update($data);
-		echo"<pre>";print_r($request->all());die;
-		$user->update($request->all());
 		
+		$user->update($request->all());
+		echo"<pre>";print_r($user);die;
 		return redirect()->route('users.show',$user->id)->with('success','个人资料更新成功');
 //		session()->flash('success','个人资料更新成功！');
 
