@@ -95,11 +95,10 @@ class UsersController extends Controller
 		$this->authorize('update',$user);
 		return view('users.edit',compact('user'));
 	}
-	public function update(UserRequest $request, User $user)
-//	public function update(UserRequest $request, ImageUploadHandler $uploader, User $user)
+	public function update(UserRequest $request, ImageUploadHandler $uploader, User $user)
 	{
 		print_r($request->avatar);die;
-		$this->authorize('update',$user);
+//		$this->authorize('update',$user);
 //		$this->validate($request,[
 //			'name' => 'required|max:50',
 //			'password' => 'nullable|confirmed|min:6'
@@ -111,16 +110,16 @@ class UsersController extends Controller
 //			$data['password'] = bcrypt($request->password);
 //		
 		
-		$data = $request->all();
-		dd($data);		
-		if($request->avatar) {
-			$result = $uploader->save($request->avatar,'avatars',$user->id,416);
-			if($result) {
-				$data['avatar'] = $result['path'];
-			}
-		}
-
-		$user->update($data);
+//		$data = $request->all();
+//		dd($data);		
+//		if($request->avatar) {
+//			$result = $uploader->save($request->avatar,'avatars',$user->id,416);
+//			if($result) {
+//				$data['avatar'] = $result['path'];
+//			}
+//		}
+//
+//		$user->update($data);
 
 		return redirect()->route('users.show',$user->id)->with('success','个人资料更新成功');
 	
