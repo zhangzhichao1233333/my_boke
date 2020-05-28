@@ -16,11 +16,18 @@
 })*/
 
 Route::get('/','PagesController@root')->name('root');
+<<<<<<< HEAD
 //Route::get('home','StaticPagesController@home')->name('home');
 Route::get('/help','StaticPagesController@help')->name('help');
 Route::get('/about','StaticPagesController@about')->name('about');
+=======
+//Route::get('sss','PagesController@root')->name('root1');
+//Route::get('home','StaticPagesController@home')->name('home');
+//Route::get('/help','StaticPagesController@help')->name('help');
+//Route::get('/about','StaticPagesController@about')->name('about');
+>>>>>>> dev
 
-Route::get('/signup','UsersController@create')->name('signup');
+//Route::get('/signup','UsersController@create')->name('signup');
 Route::resource('users','UsersController');
 /**上面创建的这句话相当于
  * te::get('/users','UsersController@index')->name('users.index'); 显示所有用户列表的页面
@@ -35,6 +42,7 @@ Route::resource('users','UsersController');
 //Route::post('login','SessionsController@store')->name('login');
 //Route::delete('logout','SessionsController@destroy')->name('logout');
 //Route::get('/users/{user}/edit','UsersController@edit')->name('users.edit');
+<<<<<<< HEAD
 //
 //Route::get('signup/confirm/{token}','UsersController@confirmEmail')->name('confirm_email');
 //Route::get('password/reset','Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
@@ -53,3 +61,44 @@ Route::resource('users','UsersController');
 Auth::routes();//存在默认路径 vendor/laravel/framework/src/Illuminate/Routing/Router.php
 
 Route::get('/home', 'HomeController@index')->name('home');
+=======
+
+//Route::get('signup/confirm/{token}','UsersController@confirmEmail')->name('confirm_email');
+//Route::get('password/reset','Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+//Route::post('password/email','Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+//Route::get('password/reset/{token}','Auth\ResetPasswordController@showResetForm')->name('password.reset');
+//Route::post('password/reset','Auth\ResetPasswordController@reset')->name('password.update');
+//Route::resource('statuses','StatusesController',['only' => ['store','destroy']]);
+//Route::get('/users/{user}/followings', 'UsersController@followings')->name('users.followings');
+//Route::get('/users/{user}/followers', 'UsersController@followers')->name('users.followers');
+//Route::post('/users/followers/{user}', 'FollowersController@store')->name('followers.store');
+//Route::delete('/users/followers/{user}', 'FollowersController@destroy')->name('followers.destroy');
+
+
+
+
+//Auth::routes();
+Auth::routes(['verify' => true]);
+Route::get('/home', 'HomeController@index')->name('home');
+//
+//
+// 用户身份验证相关的路由
+//Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+//Route::post('login', 'Auth\LoginController@login');
+//Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+
+// 用户注册相关路由
+//Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+//Route::post('register', 'Auth\RegisterController@register');
+
+// 密码重置相关路由
+//Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+//Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+//Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
+//Route::post('password/reset', 'Auth\ResetPasswordController@reset')->name('password.update');
+
+// Email 认证相关路由
+//Route::get('email/verify', 'Auth\VerificationController@show')->name('verification.notice');
+//Route::get('email/verify/{id}/{hash}', 'Auth\VerificationController@verify')->name('verification.verify');
+//Route::post('email/resend', 'Auth\VerificationController@resend')->name('verification.resend');
+>>>>>>> dev

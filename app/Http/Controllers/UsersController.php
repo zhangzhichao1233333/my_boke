@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 use App\Models\User;
 
+use App\Http\Requests\UserRequest;
+
+use App\Handlers\ImageUploadHandler;
+
 use Auth;
 
 use Mail;
@@ -51,10 +55,11 @@ class UsersController extends Controller
 	 */
 	public function show(User $user)
 	{
-		$statuses = $user->statuses()
-				 ->orderBy('created_at','desc')
-				 ->paginate(10);
-		return view('users.show',compact('user','statuses'));		
+		return view('users.show',compact('user'));
+	//	$statuses = $user->statuses()
+	//			 ->orderBy('created_at','desc')
+	//			 ->paginate(10);
+	//	return view('users.show',compact('user','statuses'));		
 	}
 	 /**数据展示信息
          * @function show
@@ -90,24 +95,23 @@ class UsersController extends Controller
 		$this->authorize('update',$user);
 		return view('users.edit',compact('user'));
 	}
-	public function update(User $user, Request $request)
+	public function update(UserRequest $request, ImageUploadHandler $uploader, User $user)
 	{
-		$this->authorize('update',$user);
-		$this->validate($request,[
-			'name' => 'required|max:50',
-			'password' => 'nullable|confirmed|min:6'
-		]);
+		$this->authorize('update',$user);		
+		
+		$data = $request->all();
 
-		$data = [];
-		$data['name'] = $request->name;
-		if($request->password){
-			$data['password'] = bcrypt($request->password);
+		if($request->avatar) {
+			$result = $uploader->save($request->avatar,'avatars',$user->id,416);
+			if($result) {
+				$data['avatar'] = $result['path'];
+			}
 		}
+
 		$user->update($data);
 
-		session()->flash('success','个人资料更新成功！');
-
-		return redirect()->route('users.show',$user->id); 
+		return redirect()->route('users.show',$user->id)->with('success','个人资料更新成功');
+	
 	}
 
 	/**删除用户

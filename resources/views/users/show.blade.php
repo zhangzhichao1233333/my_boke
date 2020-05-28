@@ -1,35 +1,38 @@
-@extends('layouts.default')
-@section('title', $user->name)
+@extends('layouts.app')
+
+@section('title', $user->name.'的个人中心')
 
 @section('content')
+
 <div class="row">
-  <div class="offset-md-2 col-md-8">
-    <section class="user_info">
-      @include('shared._user_info', ['user' => $user])
-    </section>
+	<div class="col-lg-3 col-md-3 hidden-sm hidden-xs user-info">
+		<div class="card">
+			<img class="card-img-top" src="{{ $user->avatar }}" alt="{{ $user->name }}">
+			<div class="card-body">
+           			 <h5><strong>个人简介</strong></h5>
+           			 <p>{{ $user->introduction }} </p>
+           			 <hr>
+				 <h5><strong>注册于</strong></h5>
+           			 <p>{{ $user->created_at->diffForHumans() }}</p>
+      			</div>
+		  </div>
+  	</div>
+  	<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+    		<div class="card ">
+      			<div class="card-body">
+          			<h1 class="mb-0" style="font-size:22px;">{{ $user->name }} <small>{{ $user->email }}</small></h1>
+      			</div>
+    		</div>
+    		<hr>
 
-    @if (Auth::check())
-      @include('users._follow_form')
-    @endif
+    		{{-- 用户发布的内容 --}}
+    		<div class="card ">
+      			<div class="card-body">
+				<!--暂无数据 ~_~-->
+				{{ $user->introduction }}
+      			</div>
+    		</div>
 
-    <section class="stats mt-2">
-      @include('shared._stats', ['user' => $user])
-    </section>
-    <hr>
-    <section class="status">
-      @if ($statuses->count() > 0)
-        <ul class="list-unstyled">
-          @foreach ($statuses as $status)
-            @include('statuses._status')
-          @endforeach
-        </ul>
-        <div class="mt-5">
-          {!! $statuses->render() !!}
-        </div>
-      @else
-        <p>没有数据！</p>
-      @endif
-    </section>
-  </div>
+  	</div>
 </div>
 @stop

@@ -2,13 +2,14 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Contracts\Auth\MustVerifyEmail as MustVerifyEmailContract;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Str;
-class User extends Authenticatable
+use Illuminate\Auth\MustVerifyEmail as MustVerifyEmailTrait;
+class User extends Authenticatable implements MustVerifyEmailContract
 {
-    use Notifiable;
+    use Notifiable, MustVerifyEmailTrait;
     protected $table = 'users';
     /**
      * The attributes that are mass assignable.
@@ -16,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','avatar','introduction','avatar'
     ];
 
     /**
@@ -36,7 +37,7 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    public function gravatar($size = '100')
+   /* public function gravatar($size = '100')
     {
     	$hash = md5(strtolower(trim($this->attributes['email'])));
 	return "http://www.gravatar.com/avatar/$hash?s=$size";	
@@ -94,5 +95,5 @@ class User extends Authenticatable
     public function isFollowing($user_id)
     {
         return $this->followings->contains($user_id);
-    }
+    }*/
 }

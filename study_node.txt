@@ -79,6 +79,9 @@ Laravle 创建控制器
      php artisan tinker                               进入tinker环境
      php artisan route:list                           查看路由列表         
      php artisan cache:clear                          清除缓存                 
+     php artisan event:generate                       
+
+     php artisan vendor:publish --provider="Intervention\Image\ImageServiceProviderLaravelRecent"
        
 composer 问题 
      composer install --ignore-platform-reqs 版本存在问题需要忽略
