@@ -93,7 +93,7 @@ class UsersController extends Controller
 //		$this->authorize('update',$user);
 		return view('users.edit',compact('user'));
 	}
-	public function update(UserRequest $request, User $user)
+	public function update(UserRequest $request, ImageUploadHandler $uploader, User $user)
 	{
 //		$this->authorize('update',$user);
 //		$this->validate($request,[
