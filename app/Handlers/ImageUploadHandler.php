@@ -4,6 +4,10 @@ namespace App\Handlers;
 
 use  Illuminate\Support\Str;
 
+use Image;
+
+use Str;
+
 class ImageUploadHandler
 {
     // 只允许以下后缀名的图片文件上传
