@@ -91,14 +91,14 @@ class UsersController extends Controller
 	}
 
 	public function edit(User $user)
-	{
-		dd($request->all());	
+	{	
 		$this->authorize('update',$user);
 		return view('users.edit',compact('user'));
 	}
-	public function update(UserRequest $request, ImageUploadHandler $uploader, User $user)
+	public function update(UserRequest $request, User $user)
+//	public function update(UserRequest $request, ImageUploadHandler $uploader, User $user)
 	{
-		dd($request->all());
+		dd($request->avatar);
 		$this->authorize('update',$user);
 //		$this->validate($request,[
 //			'name' => 'required|max:50',
