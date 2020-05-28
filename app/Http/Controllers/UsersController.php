@@ -97,29 +97,18 @@ class UsersController extends Controller
 	}
 	public function update(UserRequest $request, ImageUploadHandler $uploader, User $user)
 	{
-		print_r($request->avatar);die;
-//		$this->authorize('update',$user);
-//		$this->validate($request,[
-//			'name' => 'required|max:50',
-//			'password' => 'nullable|confirmed|min:6'
-//		]);
-
-//		$data = [];
-//		$data['name'] = $request->name;
-//		if($request->password){
-//			$data['password'] = bcrypt($request->password);
-//		
+		$this->authorize('update',$user);		
 		
-//		$data = $request->all();
-//		dd($data);		
-//		if($request->avatar) {
-//			$result = $uploader->save($request->avatar,'avatars',$user->id,416);
-//			if($result) {
-//				$data['avatar'] = $result['path'];
-//			}
-//		}
-//
-//		$user->update($data);
+		$data = $request->all();
+
+		if($request->avatar) {
+			$result = $uploader->save($request->avatar,'avatars',$user->id,416);
+			if($result) {
+				$data['avatar'] = $result['path'];
+			}
+		}
+
+		$user->update($data);
 
 		return redirect()->route('users.show',$user->id)->with('success','个人资料更新成功');
 	
