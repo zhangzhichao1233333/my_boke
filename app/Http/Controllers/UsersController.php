@@ -97,7 +97,7 @@ class UsersController extends Controller
 	}
 	public function update(UserRequest $request, ImageUploadHandler $uploader, User $user)
 	{
-//		$this->authorize('update',$user);
+		$this->authorize('update',$user);
 //		$this->validate($request,[
 //			'name' => 'required|max:50',
 //			'password' => 'nullable|confirmed|min:6'
@@ -110,7 +110,7 @@ class UsersController extends Controller
 //		
 		
 		$data = $request->all();
-		
+		dd($data);		
 		if($request->avatar) {
 			$result = $uploader->save($request->avatar,'avatars',$user->id,416);
 			if($result) {
