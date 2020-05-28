@@ -97,7 +97,7 @@ class UsersController extends Controller
 	}
 	public function update(UserRequest $request, ImageUploadHandler $uploader, User $user)
 	{
-		$this->authorize('update',$user);
+//		$this->authorize('update',$user);
 //		$this->validate($request,[
 //			'name' => 'required|max:50',
 //			'password' => 'nullable|confirmed|min:6'
