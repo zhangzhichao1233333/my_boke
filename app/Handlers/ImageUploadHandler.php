@@ -2,7 +2,7 @@
 
 namespace App\Handlers;
 
-use  Illuminate\Support\Str;
+//use  Illuminate\Support\Str;
 
 use Image;
 
