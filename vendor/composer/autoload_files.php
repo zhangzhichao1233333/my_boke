@@ -26,6 +26,7 @@ return array(
     'b6ec61354e97f32c0ae683041c78392a' => $vendorDir . '/scrivo/highlight.php/HighlightUtilities/functions.php',
     '4a1f389d6ce373bda9e57857d3b61c84' => $vendorDir . '/barryvdh/laravel-debugbar/src/helpers.php',
     'ed962a97bd972bc82007176b647d4e36' => $vendorDir . '/facade/ignition/src/helpers.php',
+    'c9b7496aa2e287ba00ff44d2d2a861b1' => $vendorDir . '/hieu-le/active/src/helpers.php',
     '5e8fe2a5ffaded85af682684fe3bbf5a' => $vendorDir . '/mews/captcha/src/helpers.php',
     'f960e77410032f236cef8c56617b313e' => $vendorDir . '/overtrue/laravel-lang/src/helpers.php',
     'a3a61d13a0bfb8e36cb789c5fbfdf8cf' => $vendorDir . '/summerblue/laravel-active/src/helpers.php',

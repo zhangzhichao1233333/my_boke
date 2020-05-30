@@ -27,6 +27,7 @@ class ComposerStaticInit4a28b06ae91dba25db5aee00dc1a89e3
         'b6ec61354e97f32c0ae683041c78392a' => __DIR__ . '/..' . '/scrivo/highlight.php/HighlightUtilities/functions.php',
         '4a1f389d6ce373bda9e57857d3b61c84' => __DIR__ . '/..' . '/barryvdh/laravel-debugbar/src/helpers.php',
         'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
+        'c9b7496aa2e287ba00ff44d2d2a861b1' => __DIR__ . '/..' . '/hieu-le/active/src/helpers.php',
         '5e8fe2a5ffaded85af682684fe3bbf5a' => __DIR__ . '/..' . '/mews/captcha/src/helpers.php',
         'f960e77410032f236cef8c56617b313e' => __DIR__ . '/..' . '/overtrue/laravel-lang/src/helpers.php',
         'a3a61d13a0bfb8e36cb789c5fbfdf8cf' => __DIR__ . '/..' . '/summerblue/laravel-active/src/helpers.php',
@@ -378,11 +379,13 @@ class ComposerStaticInit4a28b06ae91dba25db5aee00dc1a89e3
         ),
         'HieuLe\\Active\\' => 
         array (
-            0 => __DIR__ . '/..' . '/summerblue/laravel-active/src',
+            0 => __DIR__ . '/..' . '/hieu-le/active/src',
+            1 => __DIR__ . '/..' . '/summerblue/laravel-active/src',
         ),
         'HieuLe\\ActiveTest\\' => 
         array (
-            0 => __DIR__ . '/..' . '/summerblue/laravel-active/tests',
+            0 => __DIR__ . '/..' . '/hieu-le/active/tests',
+            1 => __DIR__ . '/..' . '/summerblue/laravel-active/tests',
         ),
         'GuzzleHttp\\Psr7\\' => 
         array (
@@ -1517,14 +1520,14 @@ class ComposerStaticInit4a28b06ae91dba25db5aee00dc1a89e3
         'Hamcrest\\Type\\IsString' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Type/IsString.php',
         'Hamcrest\\Util' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
         'Hamcrest\\Xml\\HasXPath' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
-        'HieuLe\\ActiveTest\\ActiveTest' => __DIR__ . '/..' . '/summerblue/laravel-active/tests/ActiveTest.php',
-        'HieuLe\\ActiveTest\\Http\\DumpController' => __DIR__ . '/..' . '/summerblue/laravel-active/tests/Http/DumpController.php',
-        'HieuLe\\ActiveTest\\Http\\DumpMiddleware' => __DIR__ . '/..' . '/summerblue/laravel-active/tests/Http/DumpMiddleware.php',
-        'HieuLe\\ActiveTest\\Http\\Kernel' => __DIR__ . '/..' . '/summerblue/laravel-active/tests/Http/Kernel.php',
-        'HieuLe\\ActiveTest\\StubModel' => __DIR__ . '/..' . '/summerblue/laravel-active/tests/StubModel.php',
-        'HieuLe\\Active\\Active' => __DIR__ . '/..' . '/summerblue/laravel-active/src/Active.php',
-        'HieuLe\\Active\\ActiveServiceProvider' => __DIR__ . '/..' . '/summerblue/laravel-active/src/ActiveServiceProvider.php',
-        'HieuLe\\Active\\Facades\\Active' => __DIR__ . '/..' . '/summerblue/laravel-active/src/Facades/Active.php',
+        'HieuLe\\ActiveTest\\ActiveTest' => __DIR__ . '/..' . '/hieu-le/active/tests/ActiveTest.php',
+        'HieuLe\\ActiveTest\\Http\\DumpController' => __DIR__ . '/..' . '/hieu-le/active/tests/Http/DumpController.php',
+        'HieuLe\\ActiveTest\\Http\\DumpMiddleware' => __DIR__ . '/..' . '/hieu-le/active/tests/Http/DumpMiddleware.php',
+        'HieuLe\\ActiveTest\\Http\\Kernel' => __DIR__ . '/..' . '/hieu-le/active/tests/Http/Kernel.php',
+        'HieuLe\\ActiveTest\\StubModel' => __DIR__ . '/..' . '/hieu-le/active/tests/StubModel.php',
+        'HieuLe\\Active\\Active' => __DIR__ . '/..' . '/hieu-le/active/src/Active.php',
+        'HieuLe\\Active\\ActiveServiceProvider' => __DIR__ . '/..' . '/hieu-le/active/src/ActiveServiceProvider.php',
+        'HieuLe\\Active\\Facades\\Active' => __DIR__ . '/..' . '/hieu-le/active/src/Facades/Active.php',
         'Highlight\\Autoloader' => __DIR__ . '/..' . '/scrivo/highlight.php/Highlight/Autoloader.php',
         'Highlight\\HighlightResult' => __DIR__ . '/..' . '/scrivo/highlight.php/Highlight/HighlightResult.php',
         'Highlight\\Highlighter' => __DIR__ . '/..' . '/scrivo/highlight.php/Highlight/Highlighter.php',
