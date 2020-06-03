@@ -79,3 +79,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
 
 Route::resource('categories', 'CategoriesController', ['only' => ['show']]);
+
+//设置上传图片的 URL
+Route::post('upload_image', 'TopicsController@uploadImage')->name('topics.upload_image');
