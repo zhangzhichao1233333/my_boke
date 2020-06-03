@@ -14,8 +14,7 @@ class ImageUploadHandler
     protected $allowed_ext = ["png", "jpg", "gif", 'jpeg'];
 
     public function save($file, $folder, $file_prefix,$max_width = false)
-    {
-        echo"<pre>";print_r($file);die;	 
+    {	 
         // 构建存储的文件夹规则，值如：uploads/images/avatars/201709/21/
         // 文件夹切割能让查找效率更高。
         $folder_name = "uploads/images/$folder/" . date("Ym/d", time());
@@ -38,7 +37,7 @@ class ImageUploadHandler
 
         // 将图片移动到我们的目标存储路径中
 	$file->move($upload_path, $filename);
-	
+	echo"<pre>";print_r($file);die;	
 	// 如果限制了图片宽度，就进行裁剪
         if ($max_width && $extension != 'gif') {
 
