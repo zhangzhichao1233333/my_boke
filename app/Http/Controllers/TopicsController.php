@@ -80,7 +80,8 @@ class TopicsController extends Controller
             'msg'       => '上传失败!',
             'file_path' => ''
         ];
-        // 判断是否有上传文件，并赋值给 $file
+	// 判断是否有上传文件，并赋值给 $file
+	echo"<pre>";print_r($request);die;
         if ($file = $request->upload_file) {
             // 保存图片到本地
             $result = $uploader->save($file, 'topics', \Auth::id(), 1024);
