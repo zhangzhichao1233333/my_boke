@@ -12,6 +12,8 @@ use App\Http\Requests\TopicRequest;
 
 use App\Models\Category;
 
+use App\Handlers\ImageUploadHandler;
+
 use Auth;
 
 class TopicsController extends Controller
