@@ -175,10 +175,11 @@ return [
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
-	App\Providers\RouteServiceProvider::class,
+	    App\Providers\RouteServiceProvider::class,
 
-	Barryvdh\Debugbar\ServiceProvider::class,
-	HieuLe\Active\ActiveServiceProvider::class,
+	    Barryvdh\Debugbar\ServiceProvider::class,
+	    HieuLe\Active\ActiveServiceProvider::class,
+        Mews\Purifier\PurifierServiceProvider::class,
     ],
 
     /*
@@ -230,7 +231,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-	'Active' => HieuLe\Active\Facades\Active::class,
+	    'Active' => HieuLe\Active\Facades\Active::class,
+        'Purifier' => Mews\Purifier\Facades\Purifier::class,
     ],
 
 ];
