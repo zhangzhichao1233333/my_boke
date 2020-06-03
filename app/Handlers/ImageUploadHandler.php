@@ -31,7 +31,7 @@ class ImageUploadHandler
         $filename = $file_prefix . '_' . time() . '_' . Str::random(10) . '.' . $extension;
 	echo"<pre>";print_r($extension);
 	echo"<pre>";print_r($this->allowed_ext);
-	echo"<pre>";print_r($file);die;
+	echo"<pre>";print_r(in_array($extension, $this->allowed_ext));die;
         // 如果上传的不是图片将终止操作
         if ( ! in_array($extension, $this->allowed_ext)) {
             return false;
