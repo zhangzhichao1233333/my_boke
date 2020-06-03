@@ -46,7 +46,6 @@ class TopicsController extends Controller
     	{
         	$topic->fill($request->all());
 		$topic->user_id = Auth::id();
-		echo"<pre>";print_r($topic);die;
         	$topic->save();
 
         	return redirect()->route('topics.show', $topic->id)->with('success', '帖子创建成功！');
@@ -83,7 +82,6 @@ class TopicsController extends Controller
             'file_path' => ''
         ];
 	// 判断是否有上传文件，并赋值给 $file
-	echo"<pre>";print_r(13213132);die;
         if ($file = $request->upload_file) {
             // 保存图片到本地
             $result = $uploader->save($file, 'topics', \Auth::id(), 1024);

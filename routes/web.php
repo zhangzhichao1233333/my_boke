@@ -81,4 +81,4 @@ Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'crea
 Route::resource('categories', 'CategoriesController', ['only' => ['show']]);
 
 //设置上传图片的 URL
-Route::get('upload_image', 'TopicsController@uploadImage')->name('topics.upload_image');
+Route::post('upload_image', 'TopicsController@uploadImage')->name('topics.upload_image');
