@@ -43,7 +43,8 @@ class TopicsController extends Controller
 	public function store(TopicRequest $request, Topic $topic)
     	{
         	$topic->fill($request->all());
-        	$topic->user_id = Auth::id();
+		$topic->user_id = Auth::id();
+		echo"<pre>";print_r($topic);die;
         	$topic->save();
 
         	return redirect()->route('topics.show', $topic->id)->with('success', '帖子创建成功！');
