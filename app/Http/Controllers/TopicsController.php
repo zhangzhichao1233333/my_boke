@@ -12,6 +12,8 @@ use App\Http\Requests\TopicRequest;
 
 use App\Models\Category;
 
+use Auth;
+
 class TopicsController extends Controller
 {
     public function __construct()
