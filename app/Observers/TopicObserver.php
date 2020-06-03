@@ -21,6 +21,7 @@ class TopicObserver
 
     public function saving(Topic $topic)
     {
+	echo"<pre>";print_r($topic);die;
         $topic->body = clean($topic->body, 'user_topic_body');
 	echo"<pre>";print_r($topic);die;
         $topic->excerpt = make_excerpt($topic->body);
