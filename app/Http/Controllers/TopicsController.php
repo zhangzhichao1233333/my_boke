@@ -86,7 +86,7 @@ class TopicsController extends Controller
             // 保存图片到本地
 	    	
 	    $result = $uploader->save($file, 'topics', \Auth::id(), 1024);
-	    echo"<pre>";print_r($result);die;
+
 	    // 图片保存成功的话
             if ($result) {
                 $data['file_path'] = $result['path'];
