@@ -33,8 +33,8 @@ class ImageUploadHandler
         if ( ! in_array($extension, $this->allowed_ext)) {
             return false;
         }
-        $type = move_uploaded_file($file,$upload_path.'/'.$filename);
-        echo"<pre>";print_r($type);die;
+        //$type = move_uploaded_file($file,$upload_path.'/'.$filename);
+        //echo"<pre>";print_r($type);die;
         // 将图片移动到我们的目标存储路径中
 	$file->move($upload_path, $filename);
 	echo"<pre>";print_r($file);die;	
