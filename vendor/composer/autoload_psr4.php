@@ -61,6 +61,8 @@ return array(
     'HieuLe\\Active\\' => array($vendorDir . '/hieu-le/active/src', $vendorDir . '/summerblue/laravel-active/src'),
     'HieuLe\\ActiveTest\\' => array($vendorDir . '/hieu-le/active/tests', $vendorDir . '/summerblue/laravel-active/tests'),
     'GuzzleHttp\\Psr7\\' => array($vendorDir . '/guzzlehttp/psr7/src'),
+    'GuzzleHttp\\Promise\\' => array($vendorDir . '/guzzlehttp/promises/src'),
+    'GuzzleHttp\\' => array($vendorDir . '/guzzlehttp/guzzle/src'),
     'Fideloper\\Proxy\\' => array($vendorDir . '/fideloper/proxy/src'),
     'Faker\\' => array($vendorDir . '/fzaninotto/faker/src/Faker'),
     'Facade\\Ignition\\' => array($vendorDir . '/facade/ignition/src'),
