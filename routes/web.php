@@ -101,4 +101,16 @@ Route::get('/home', 'HomeController@index')->name('home');
 //Route::get('email/verify', 'Auth\VerificationController@show')->name('verification.notice');
 //Route::get('email/verify/{id}/{hash}', 'Auth\VerificationController@verify')->name('verification.verify');
 //Route::post('email/resend', 'Auth\VerificationController@resend')->name('verification.resend');
+<<<<<<< HEAD
+>>>>>>> dev
+=======
+
+Route::resource('topics', 'TopicsController', ['only' => ['index',  'create', 'store', 'update', 'edit', 'destroy']]);
+
+Route::get('topics/{topic}/{slug?}', 'TopicsController@show')->name('topics.show');
+
+Route::resource('categories', 'CategoriesController', ['only' => ['show']]);
+
+//设置上传图片的 URL
+Route::post('upload_image', 'TopicsController@uploadImage')->name('topics.upload_image');
 >>>>>>> dev

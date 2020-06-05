@@ -82,11 +82,17 @@ Laravle 创建控制器
      php artisan event:generate                       
 
      php artisan vendor:publish --provider="Intervention\Image\ImageServiceProviderLaravelRecent"
+     php artisan horizon                              运行Horizon
+     php artisan horizon &                            后台运行Horizon
+     php artisan horizon:pause                        暂停Horizon 
+     php artisan horizon:continue                     继续Horizon
+     php artisan horizon:terminate                    终止Horizon主进程 
+
        
 composer 问题 
      composer install --ignore-platform-reqs 版本存在问题需要忽略
-     composer update --ignore-platform-regs 版本存在问题更新版本
-    composer require "overtrue/laravel-lang:~3.0" --ignore-platform-regs
+     composer update  --ignore-platform-reqs 版本存在问题更新版本
+     composer require "overtrue/laravel-lang:~3.0" --ignore-platform-reqs
 
 npm 信息
      npn run dev将.scss 转为.css 文件
@@ -97,3 +103,4 @@ npm 信息
 	npm cache clear --force
 	npm install	
 
+systemctl restart php74-php-fpm -l
