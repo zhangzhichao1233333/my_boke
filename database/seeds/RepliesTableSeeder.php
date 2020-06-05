@@ -15,7 +15,6 @@ class RepliesTableSeeder extends Seeder
         // 所有话题 ID 数组，如：[1,2,3,4]
         $topic_ids = Topic::all()->pluck('id')->toArray();
  	
-	echo"<pre>";print_r($topic_ids);die;
         // 获取 Faker 实例
         $faker = app(Faker\Generator::class);
 
