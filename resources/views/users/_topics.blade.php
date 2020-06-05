@@ -3,17 +3,14 @@
   <ul class="list-group mt-4 border-0">
     @foreach ($topics as $topic)
       <li class="list-group-item pl-2 pr-2 border-right-0 border-left-0 @if($loop->first) border-top-0 @endif">
-        <a href="{{ $topic->link() }}">
+        <a href="{{ route('topics.show', $topic->id) }}">
           {{ $topic->title }}
         </a>
-
-        <div class="reply-content text-secondary mt-2 mb-2">
-          {!! $reply->content !!}
-        </div>
-        
-        <div class="text-secondary" style="font-size:0.9em;">
-          <i class="far fa-clock"></i> 回复于 {{ $reply->created_at->diffForHumans() }}
-        </div>
+        <span class="meta float-right text-secondary">
+          {{ $topic->reply_count }} 回复
+          <span> ⋅ </span>
+          {{ $topic->created_at->diffForHumans() }}
+        </span>
       </li>
     @endforeach
   </ul>
@@ -24,5 +21,5 @@
 
 {{-- 分页 --}}
 <div class="mt-4 pt-1">
-  {!! $replies->appends(Request::except('page'))->render() !!}
+  {!! $topics->render() !!}
 </div>
