@@ -97,3 +97,4 @@ npm 信息
 	npm cache clear --force
 	npm install	
 
+systemctl restart php74-php-fpm -l
