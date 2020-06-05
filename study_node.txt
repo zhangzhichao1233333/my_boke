@@ -82,6 +82,12 @@ Laravle 创建控制器
      php artisan event:generate                       
 
      php artisan vendor:publish --provider="Intervention\Image\ImageServiceProviderLaravelRecent"
+     php artisan horizon                              运行Horizon
+     php artisan horizon &                            后台运行Horizon
+     php artisan horizon:pause                        暂停Horizon 
+     php artisan horizon:continue                     继续Horizon
+     php artisan horizon:terminate                    终止Horizon主进程 
+
        
 composer 问题 
      composer install --ignore-platform-reqs 版本存在问题需要忽略
