@@ -10,12 +10,12 @@ use App\Models\Reply;
 class ReplyObserver
 {
 
-    public function creating(Reply $reply)
-    {
-        $reply->content = clean($reply->content, 'user_topic_body');
-    }
+   // public function creating(Reply $reply)
+   //{
+   //     $reply->content = clean($reply->content, 'user_topic_body');
+   // }
 
-    public function creatd(Reply $reply)
+    public function created(Reply $reply)
     {
 	    
 	echo"<pre>";print_r($reply);die;
