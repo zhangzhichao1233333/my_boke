@@ -84,9 +84,4 @@ class TopicReplied extends Notification implements ShouldQueue
         ];
     }
 
-    public function via($notifiable)
-    {
-        // 开启通知的频道
-        return ['database', 'mail'];
-    }
 }
