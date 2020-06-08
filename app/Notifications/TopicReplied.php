@@ -9,7 +9,7 @@ use Illuminate\Notifications\Notification;
 
 use App\Models\Reply;
 
-class TopicReplied extends Notification implements ShouldQueue
+class TopicReplied extends Notification
 {
     use Queueable;
   
