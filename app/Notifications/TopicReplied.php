@@ -48,9 +48,9 @@ class TopicReplied extends Notification implements ShouldQueue
     {
 	    $url = $this->reply->topic->link(['#reply' . $this->reply->id]);
         return (new MailMessage)
-                    ->line('你的话题有新回复！11111')
-                    ->line($url)
-                    ->action('查看回复', $url);
+                    ->line('The introduction to the notification.')
+                    ->action('Notification Action', url('/'))
+                    ->line('Thank you for using our application!');
     }
 
     /**
