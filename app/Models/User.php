@@ -7,9 +7,17 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Str;
 use Illuminate\Auth\MustVerifyEmail as MustVerifyEmailTrait;
+
+use Auth;
+
 class User extends Authenticatable implements MustVerifyEmailContract
 {
-    use Notifiable, MustVerifyEmailTrait;
+    use MustVerifyEmailTrait;
+
+    use Notifiable {
+    	notify as protected laravelNotify;
+    }
+
     protected $table = 'users';
     /**
      * The attributes that are mass assignable.
@@ -48,63 +56,30 @@ class User extends Authenticatable implements MustVerifyEmailContract
         return $this->id == $model->user_id;
     }
 
-   /* public function gravatar($size = '100')
+    public function replies()
     {
-    	$hash = md5(strtolower(trim($this->attributes['email'])));
-	return "http://www.gravatar.com/avatar/$hash?s=$size";	
+        return $this->hasMany(Reply::class);
     }
 
-    public static function boot()
+    public function notify($instance)
     {
-    	parent::boot();
-
-	static::creating(function ($user) {
-		$user->activation_token = Str::random(10);
-	});
-    }
-
-    public function statuses()
-    {
-    	return $this->hasMany(Status::class);
-    }
-
-    public function feed()
-    {
-        $user_ids = $this->followings->pluck('id')->toArray();
-        array_push($user_ids, $this->id);
-        return Status::whereIn('user_id', $user_ids)
-                              ->with('user')
-                              ->orderBy('created_at', 'desc');
-    }
-
-    public function followers()
-    {
-    	return $this->belongsToMany(User::Class,'followers','user_id','follower_id');
-    }
-	
-    public function followings()
-    {
-    	return $this->belongsToMany(User::Class,'followers','follower_id','user_id');
-    }
-
-    public function follow($user_ids)
-    {
-        if ( ! is_array($user_ids)) {
-            $user_ids = compact('user_ids');
+        // 如果要通知的人是当前用户，就不必通知了！
+        if ($this->id == Auth::id()) {
+            return;
         }
-        $this->followings()->sync($user_ids, false);
-    }
 
-    public function unfollow($user_ids)
-    {
-        if ( ! is_array($user_ids)) {
-            $user_ids = compact('user_ids');
+        // 只有数据库类型通知才需提醒，直接发送 Email 或者其他的都 Pass
+        if (method_exists($instance, 'toDatabase')) {
+            $this->increment('notification_count');
         }
-        $this->followings()->detach($user_ids);
+
+        $this->laravelNotify($instance);
     }
 
-    public function isFollowing($user_id)
+    public function markAsRead()
     {
-        return $this->followings->contains($user_id);
-    }*/
+        $this->notification_count = 0;
+        $this->save();
+        $this->unreadNotifications->markAsRead();
+    }
 }
