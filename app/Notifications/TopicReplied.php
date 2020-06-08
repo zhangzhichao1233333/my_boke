@@ -50,6 +50,7 @@ class TopicReplied extends Notification implements ShouldQueue
 
         return (new MailMessage)
                     ->line('你的话题有新回复！')
+                    ->line($url)
                     ->action('查看回复', $url);
     }
 
