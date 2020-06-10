@@ -53,7 +53,7 @@ Route::resource('users','UsersController');
 
 //Auth::routes();
 Auth::routes(['verify' => true]);
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 //
 //
 // 用户身份验证相关的路由
