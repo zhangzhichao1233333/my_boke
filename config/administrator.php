@@ -21,7 +21,7 @@ return array(
      *
      * @type string
      */
-    'title' =>  env('APP_NAME', 'My Boke'),,
+    'title' =>  env('APP_NAME', 'My Boke'),
 
     /*
      * The path to your model config directory
