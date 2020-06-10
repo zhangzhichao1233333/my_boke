@@ -54,7 +54,8 @@ class ServiceProvider extends BaseServiceProvider
     {
         $requestTld = $this->getRequestTld();
         $allowedTlds = Config::get('sudosu.allowed_tlds');
-
+        echo"<pre>";print_r($requestTld);
+        echo"<pre>";print_r($allowedTlds);die;
         return in_array($requestTld, $allowedTlds);
     }
 
