@@ -31,7 +31,6 @@ class TopicsController extends Controller
 			->with('user','category')
 			->paginate(20);
 		$active_users = $user->getActiveUsers();
-        	dd($active_users);
 		return view('topics.index', compact('topics'));
 	}
 
