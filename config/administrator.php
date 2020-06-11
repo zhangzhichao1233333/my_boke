@@ -58,9 +58,12 @@ return array(
      * 		'Analytics' => array('E-Commerce' => 'page.ecommerce.analytics'),
      *	)
      */
+
     'menu' => [
-    	'用户与权限' => [
+        '用户与权限' => [
             'users',
+            'roles',
+            'permissions',
         ],
     ],
 
