@@ -87,7 +87,7 @@ Laravle 创建控制器
      php artisan horizon:pause                        暂停Horizon 
      php artisan horizon:continue                     继续Horizon
      php artisan horizon:terminate                    终止Horizon主进程 
-
+     php artisan migrate:refresh --seed               重新生成干净的数据
        
 composer 问题 
      composer install --ignore-platform-reqs 版本存在问题需要忽略

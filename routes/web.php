@@ -79,7 +79,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //Auth::routes();
 Auth::routes(['verify' => true]);
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 //
 //
 // 用户身份验证相关的路由
@@ -120,4 +120,9 @@ Route::post('upload_image', 'TopicsController@uploadImage')->name('topics.upload
 Route::resource('replies', 'RepliesController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
 
 Route::resource('notifications', 'NotificationsController', ['only' => ['index']]);
+<<<<<<< HEAD
+>>>>>>> dev
+=======
+
+Route::get('permission-denied', 'PagesController@permissionDenied')->name('permission-denied');
 >>>>>>> dev
