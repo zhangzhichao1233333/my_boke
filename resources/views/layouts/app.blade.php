@@ -8,9 +8,9 @@
 
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
-<title>@yield('title', 'My Boke')</title>
+<title>@yield('title', '') - {{ setting('site_name', 'My Boke') }}</title>
   <meta name="description" content="@yield('description', 'My Boke')" />
-  <meta name="keyword" content="@yield('keyword', 'my_boke')" />
+  <meta name="keyword" content="@yield('keyword',setting('seo_keyword', 'LaraBBS')))" />
   <!-- Styles -->
   <link href="{{ mix('css/app.css') }}" rel="stylesheet">
   
