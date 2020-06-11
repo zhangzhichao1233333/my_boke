@@ -1,0 +1,106 @@
+  /*---------- author zane   date 2020/4/15 ----------*/  
+ 文件夹名称                   简介
+ app                     应用城西的业务逻辑代码存放文件夹
+    Console              存放自定义Artisan命令文件
+    Http
+	Controller       存放控制器文件
+        Middlewra        存放【中间件】文件
+    bootstrap            框架启动和自动加载设置相关的文件
+    composer.jsom        应用依赖的扩展报
+    composer.lock        扩展包列表，确保这个应用的副本使用相同版本的扩展包
+    config               应用程序的配置文件
+    database             数据库操作相关文件（数据库迁移和数据库填充）
+    node_modules         存放NPM依赖模块
+    package.json         应用所需的NPM包配置文件
+    public               前端控制器和资源相关文件（图片 JavaScript CSS）
+    readme.md            项目介绍说明文件
+    resources            应用资源
+        js               未编译的JavaScript代码
+        sass             未编译的SASS代码（将会编译为CSS）
+        lang             多语言文件
+        views            试图文件
+   routes 
+        api.php          用于定义API类型的路由
+        channels.php     事件广播注册信息
+        web.php          用于定义Web类型的路由（重点，大部分情况下本书会用到）
+   server.php            使用PHP内置服务器时的URL重写（类似于Apache的‘mod_rewrite’） 
+   storage               编译后的视图，基于会话，文件缓存和其他架构生成的文件
+        app              目录可用于存储应用城西使用的任何文件
+        framework        目录被用于保存框架生成得分文件及缓存
+        log              应用程序的日志文件
+   tests                 应用测试相关文件
+   verdor                Composer依赖模块
+   webpack.mix.js        Laravel的前端工作流配置文件
+   yam.lock              Yam依赖版本锁定文件
+   .gitignore            被Git所忽略的文件
+   .env                  环境变量配置的我呢见
+
+git信息
+    git init             初始化git信息
+    git config --global user.name '随便的名称'
+    git config --global user.email '获取key时候的邮箱'
+    git add -A           添加修改项
+    git commit -m ‘提交备注’
+    git checkout -b  dev 添加新的分支
+    git merge dev         合并dev到master 上 
+    git clean -d -fx .    删除所有冲突文件
+    在Git中使用git add命令添加文件进入版本库时，弹出警告：
+    git config --global core.safecrlf true
+
+
+
+/*---------- author zane   date 2020/4/17 ----------*/
+Laravel配置路由 
+  当用户在查看一个网页时一个完成的访问过程如下
+      1.打开浏览器在地址栏中输入URL并访问
+      2.路由将URL请求映射到指定的控制器上
+      3.控制器接受到请求，开始进行处理，如果视图需要动态数据进行渲染，则控制亲会开始冲模型中读取数据
+      4 数据读取完毕之，京数传给视图进行渲染
+      5.视图渲染完毕，在浏览上呈现出完整的页面
+   
+Laravel常用的基本HTTP操作分为GET/POST/PATCH/DELETE
+      GET 常用月页面的读取
+      POST 常用于诗提交
+      PATCH 常用于数据更新
+      DELETE 常用于数删
+
+Laravle 创建控制器
+     php artisan make:controller StaticPageController 生成控制器
+     php artisan key:generate                         生成App key 在.env中的64位加密方式
+     php artisan make:model                           生成模型
+     php artisan make:policy                          生成授权策略！！！
+     php artisan make:seeder                          生成Seeder文件！！！
+     php artisan migrate                              执行迁移！！! 
+     php artisan migrate:rollback                     回滚迁移！！！
+     php artisan migrate:refresh                      重置数据库
+     php artisan mrgrate:fresh                        删除表并重新生成
+     php artisan db:seed                              填充数据库
+     php artisan db:seed --class=UsersTableSeeder     只填充后面这个表
+     php artisan tinker                               进入tinker环境
+     php artisan route:list                           查看路由列表         
+     php artisan cache:clear                          清除缓存                 
+     php artisan event:generate                       
+
+     php artisan vendor:publish --provider="Intervention\Image\ImageServiceProviderLaravelRecent"
+     php artisan horizon                              运行Horizon
+     php artisan horizon &                            后台运行Horizon
+     php artisan horizon:pause                        暂停Horizon 
+     php artisan horizon:continue                     继续Horizon
+     php artisan horizon:terminate                    终止Horizon主进程 
+
+       
+composer 问题 
+     composer install --ignore-platform-reqs 版本存在问题需要忽略
+     composer update  --ignore-platform-reqs 版本存在问题更新版本
+     composer require "overtrue/laravel-lang:~3.0" --ignore-platform-reqs
+
+npm 信息
+     npn run dev将.scss 转为.css 文件
+     npm run watch-poll 发上变化后立即执行编译转化      
+     删除npm 重装npm
+	rm -rf node_modules
+	rm package-lock.json yam.lock
+	npm cache clear --force
+	npm install	
+
+systemctl restart php74-php-fpm -l
