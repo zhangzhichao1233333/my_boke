@@ -15,7 +15,7 @@
     return view('welcome');
 })*/
 
-Route::get('/','TopicsController@root')->name('root');
+Route::get('/','TopicsController@index')->name('root');
 //Route::get('sss','PagesController@root')->name('root1');
 //Route::get('home','StaticPagesController@home')->name('home');
 //Route::get('/help','StaticPagesController@help')->name('help');

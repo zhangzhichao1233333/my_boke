@@ -37,6 +37,16 @@ class TopicsController extends Controller
 
         	return view('topics.index', compact('topics', 'active_users', 'links'));
 	}
+    
+   /** 创建
+    * @function create
+    * @author Zane
+    * @data 2020/4/22
+   **/
+   public function create()
+   {
+            return view('topics.create');
+   }
 
     public function show(Request $request, Topic $topic)
     {
