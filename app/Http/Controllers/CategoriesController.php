@@ -10,6 +10,8 @@ use App\Models\Category;
 
 use App\Models\Link;
 
+use App\Models\User;
+
 class CategoriesController extends Controller
 {
      public function show(Category $category, Request $request, Topic $topic, User $user, Link $link)
