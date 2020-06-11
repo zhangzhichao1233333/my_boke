@@ -15,12 +15,16 @@
     return view('welcome');
 })*/
 
+<<<<<<< HEAD
 Route::get('/','PagesController@root')->name('root');
 <<<<<<< HEAD
 //Route::get('home','StaticPagesController@home')->name('home');
 Route::get('/help','StaticPagesController@help')->name('help');
 Route::get('/about','StaticPagesController@about')->name('about');
 =======
+=======
+Route::get('/','TopicsController@index')->name('root');
+>>>>>>> dev
 //Route::get('sss','PagesController@root')->name('root1');
 //Route::get('home','StaticPagesController@home')->name('home');
 //Route::get('/help','StaticPagesController@help')->name('help');
