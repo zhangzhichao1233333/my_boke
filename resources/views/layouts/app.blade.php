@@ -8,7 +8,7 @@
 
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
-<title>@yield('title', 'My Boke') - {{ setting('site_name', 'Laravel') }}</title>
+<title>@yield('title', 'My Boke')</title>
   <meta name="description" content="@yield('description', setting('seo_description', 'LaraBBS 爱好者社区。'))" />
   <meta name="keyword" content="@yield('keyword', 'my_boke')" />
   <!-- Styles -->
