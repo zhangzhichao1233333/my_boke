@@ -9,7 +9,7 @@
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
 <title>@yield('title', 'My Boke')</title>
-  <meta name="description" content="@yield('description', setting('seo_description', 'LaraBBS 爱好者社区。'))" />
+  <meta name="description" content="@yield('description', 'My Boke')" />
   <meta name="keyword" content="@yield('keyword', 'my_boke')" />
   <!-- Styles -->
   <link href="{{ mix('css/app.css') }}" rel="stylesheet">
