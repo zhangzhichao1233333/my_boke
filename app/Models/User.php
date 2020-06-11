@@ -21,6 +21,8 @@ class User extends Authenticatable implements MustVerifyEmailContract
     }
     
     use HasRoles;
+  
+    use Traits\ActiveUserHelper;
 
     protected $table = 'users';
     /**

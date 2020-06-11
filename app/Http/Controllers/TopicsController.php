@@ -16,6 +16,8 @@ use App\Handlers\ImageUploadHandler;
 
 use Auth;
 
+use App\Models\User;
+
 class TopicsController extends Controller
 {
     public function __construct()
@@ -28,6 +30,8 @@ class TopicsController extends Controller
 		$topics = $topic->withOrder($request->order)
 			->with('user','category')
 			->paginate(20);
+		$active_users = $user->getActiveUsers();
+        	dd($active_users);
 		return view('topics.index', compact('topics'));
 	}
 
